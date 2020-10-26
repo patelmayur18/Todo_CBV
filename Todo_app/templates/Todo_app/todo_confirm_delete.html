@@ -1,0 +1,22 @@
+{% extends "Todo_app/base.html" %}
+
+{% block title %}
+To Do Delete Confirm
+{% endblock title %}
+
+{% block content %}
+
+<div class="col-4 offset-4">
+    <div class="card mt-4 p-2" style="width: 18rem;">
+        <div class="card-body">
+            <p>Are you sure you want to delete</p>
+            <h5 class="card-title">{{ object }}</h5>
+            <form method="POST">
+                {% csrf_token %}
+                <input class='btn btn-danger' type="submit" value="Confirm">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
